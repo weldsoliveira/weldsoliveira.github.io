@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LiveEdge for YouTube — Privacy Policy &amp; Terms of Use</title>
+<meta name="description" content="Privacy policy and terms of use for the LiveEdge for YouTube Chrome extension. Zero data collection.">
+<link rel="icon" href="img/icon128.png">
+<style>
+  :root {
+    --bg: #0d1117; --panel: #161d27; --text: #e6edf3; --muted: rgba(230,237,243,0.65);
+    --blue: #4d9fff; --teal: #2dd4bf; --border: rgba(255,255,255,0.1);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: "Segoe UI", system-ui, sans-serif; line-height: 1.65; }
+  a { color: var(--blue); text-decoration: none; }
+  .wrap { max-width: 780px; margin: 0 auto; padding: 0 24px 56px; }
+  header { padding: 28px 0 8px; display: flex; align-items: center; gap: 12px; }
+  header img { width: 36px; height: 36px; border-radius: 9px; }
+  header b { font-size: 18px; }
+  h1 { font-size: 30px; margin: 24px 0 4px; }
+  .updated { color: var(--muted); font-size: 14px; margin-bottom: 28px; }
+  h2 { font-size: 20px; margin: 32px 0 10px; }
+  p, li { color: var(--muted); font-size: 15.5px; }
+  p strong, li strong { color: var(--text); }
+  ul { padding-left: 22px; margin-top: 8px; }
+  li + li { margin-top: 6px; }
+  code { background: var(--panel); border: 1px solid var(--border); border-radius: 5px; padding: 1px 6px; font-size: 13.5px; }
+  .card { background: var(--panel); border-left: 3px solid var(--teal); border-radius: 10px; padding: 16px 20px; margin: 14px 0; }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 13px; color: var(--muted); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img src="img/icon128.png" alt="LiveEdge icon">
+      <b>LiveEdge</b>
+    </header>
+
+    <h1>Privacy Policy &amp; Terms of Use</h1>
+    <p class="updated">LiveEdge for YouTube (Chrome extension) — last updated: July 6, 2026</p>
+
+    <h2>1. What the extension does</h2>
+    <p>
+      LiveEdge monitors YouTube live-stream pages and, when the player falls behind the live
+      edge (buffer drift), automatically jumps playback back to the live edge and gently speeds
+      up playback to trim the local buffer. It can also show a small on-page status panel with
+      your current latency and open a popup with live session statistics.
+    </p>
+    <div class="card">
+      <p>
+        <strong>Honest limitation:</strong> the extension does <strong>not</strong> remove the
+        broadcaster's original transmission delay. That delay is created by the encoder and CDN
+        of whoever is broadcasting, before the video ever reaches your browser. The extension
+        only corrects the extra drift that accumulates in your local player.
+      </p>
+    </div>
+
+    <h2>2. Privacy — what we collect</h2>
+    <p><strong>Nothing.</strong> In detail:</p>
+    <ul>
+      <li>No personal data is collected, stored, or transmitted anywhere.</li>
+      <li>No analytics, telemetry, tracking pixels, or third-party services of any kind.</li>
+      <li>No browsing history is read. The extension only runs on <code>youtube.com</code> pages.</li>
+      <li>
+        Your settings (enabled state, check interval, buffer optimizer, panel visibility) are stored
+        with <code>chrome.storage.sync</code>, which lives in your own browser profile and, if you
+        are signed into Chrome, syncs through your Google account. The developer never sees them.
+      </li>
+      <li>
+        A cumulative counter of time saved (a single number) and a one-time "first live seen"
+        flag are stored with <code>chrome.storage.local</code> — on your device only, never
+        transmitted, and deleted when the extension is uninstalled.
+      </li>
+      <li>Other statistics shown in the status panel exist only in the page's memory and are discarded when the tab closes.</li>
+    </ul>
+
+    <h2>3. Permissions explained</h2>
+    <ul>
+      <li><strong>storage</strong> — saves your settings so they persist between sessions.</li>
+      <li>
+        <strong>Access to youtube.com</strong> — required to detect the "LIVE" badge state and
+        interact with the video player on watch pages. The extension does not read, alter, or
+        collect any other content from the page.
+      </li>
+    </ul>
+
+    <h2>4. Terms of use</h2>
+    <ul>
+      <li>The extension is provided <strong>"as is"</strong>, at no cost, without warranty of any kind.</li>
+      <li>
+        It is an independent project, <strong>not affiliated with, endorsed by, or sponsored by
+        YouTube or Google</strong>. "YouTube" and "Chrome" are trademarks of Google LLC, used here
+        only to describe compatibility.
+      </li>
+      <li>
+        YouTube may change its page structure at any time, which can temporarily break
+        functionality until the extension is updated.
+      </li>
+      <li>You may uninstall the extension at any time; all stored settings are removed by the browser upon uninstall.</li>
+      <li>
+        <strong>Donations are voluntary.</strong> The extension may display links to donation
+        options (Pix and Ko-fi). Donating does not unlock features, remove limitations, or grant
+        any additional service — every feature is available to all users. Pix payments are
+        processed entirely by your own bank; Ko-fi donations are processed by
+        <a href="https://ko-fi.com" target="_blank" rel="noopener">ko-fi.com</a> under its own terms.
+        The extension never handles payment data.
+      </li>
+    </ul>
+
+    <h2>5. Contact</h2>
+    <p>
+      Questions or issues? Reach out through the
+      <a href="https://chromewebstore.google.com/detail/dcojohelaopacelnmcajjpnbojicphci" target="_blank" rel="noopener">Chrome Web Store listing</a>'s
+      support section.
+    </p>
+
+    <footer>
+      <p><a href="index.html">← liveedge home</a> · LiveEdge for YouTube · Independent utility · © 2026 Welington de Sousa Oliveira</p>
+    </footer>
+  </div>
+</body>
+</html>

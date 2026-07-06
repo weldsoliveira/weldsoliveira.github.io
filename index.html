@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LiveEdge for YouTube — menos atraso nas lives</title>
+<meta name="description" content="Extensão Chrome que mantém as lives do YouTube coladas no ao vivo: ressincronização automática, otimizador de buffer e medidor de atraso em tempo real.">
+<link rel="icon" href="img/icon128.png">
+<style>
+  :root {
+    --bg: #0d1117; --panel: #161d27; --text: #e6edf3; --muted: rgba(230,237,243,0.65);
+    --blue: #4d9fff; --teal: #2dd4bf; --border: rgba(255,255,255,0.1);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: "Segoe UI", system-ui, sans-serif; line-height: 1.6; }
+  a { color: var(--blue); text-decoration: none; }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 24px; }
+  header { padding: 28px 0; display: flex; align-items: center; gap: 12px; }
+  header img { width: 40px; height: 40px; border-radius: 10px; }
+  header b { font-size: 20px; }
+  .hero { padding: 48px 0 40px; }
+  .hero h1 { font-size: clamp(30px, 5vw, 46px); line-height: 1.15; font-weight: 700; letter-spacing: -0.5px; }
+  .hero h1 .hl { background: linear-gradient(90deg, var(--blue), var(--teal)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .hero p.sub { margin-top: 18px; font-size: 19px; color: var(--muted); max-width: 620px; }
+  .cta { display: inline-block; margin-top: 28px; background: linear-gradient(90deg, #1a73e8, #0d9488); color: #fff; font-weight: 600; font-size: 17px; padding: 14px 28px; border-radius: 10px; }
+  .cta:hover { filter: brightness(1.1); }
+  .shot { margin: 44px 0 0; border: 1px solid var(--border); border-radius: 14px; overflow: hidden; box-shadow: 0 24px 80px rgba(0,0,0,0.5); }
+  .shot img { display: block; width: 100%; height: auto; }
+  .caption { margin-top: 12px; font-size: 14px; color: var(--muted); text-align: center; }
+  section { padding: 56px 0 8px; }
+  h2 { font-size: 26px; margin-bottom: 20px; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+  .card { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 22px; }
+  .card h3 { font-size: 17px; margin-bottom: 8px; }
+  .card p { font-size: 15px; color: var(--muted); }
+  .honest { background: var(--panel); border-left: 3px solid var(--teal); border-radius: 10px; padding: 20px 22px; margin-top: 8px; }
+  .honest p { color: var(--muted); font-size: 15.5px; }
+  .honest b { color: var(--text); }
+  .grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin-top: 8px; }
+  footer { margin-top: 64px; padding: 32px 0 44px; border-top: 1px solid var(--border); font-size: 13.5px; color: var(--muted); }
+  footer p + p { margin-top: 8px; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img src="img/icon128.png" alt="Ícone do LiveEdge">
+      <b>LiveEdge</b>
+    </header>
+
+    <div class="hero">
+      <h1>Chega de saber do gol<br>pelo <span class="hl">grito do vizinho</span>.</h1>
+      <p class="sub">O LiveEdge mantém as lives do YouTube coladas no ao vivo — automaticamente,
+        sem você configurar nada. Um medidor discreto na barra do player mostra o seu atraso em tempo real.</p>
+      <a class="cta" href="https://chromewebstore.google.com/detail/dcojohelaopacelnmcajjpnbojicphci" target="_blank" rel="noopener">Instalar na Chrome Web Store</a>
+      <div class="shot">
+        <img src="img/liveedge-0s-worldcup.png" alt="Live da Copa do Mundo no YouTube com o LiveEdge marcando 0.0s atrás do ao vivo em 4K" loading="lazy">
+      </div>
+      <p class="caption">Brasil x Noruega na CazéTV, oitavas da Copa 2026 — <b>0.0s atrás do ao vivo</b>, em 4K.</p>
+    </div>
+
+    <section>
+      <h2>O que ele faz</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Ressincronização automática</h3>
+          <p>Detecta quando o player fica para trás do ao vivo (drift de buffer) e te traz de volta, sozinho.</p>
+        </div>
+        <div class="card">
+          <h3>Otimizador de buffer</h3>
+          <p>Acelera a reprodução de forma imperceptível para encostar na borda da transmissão — e recua se a sua rede não sustentar. Sem travamentos.</p>
+        </div>
+        <div class="card">
+          <h3>Medidor de atraso</h3>
+          <p>Indicador ao lado do botão AO VIVO mostra quantos segundos você está atrás — e quantos já foram devolvidos. Um clique pula direto pro ao vivo.</p>
+        </div>
+        <div class="card">
+          <h3>Zero configuração</h3>
+          <p>Ele mede a sua rede e se ajusta sozinho: aprende o menor atraso que a sua conexão aguenta. Instale e esqueça.</p>
+        </div>
+        <div class="card">
+          <h3>Zero coleta de dados</h3>
+          <p>Sem analytics, sem rastreamento, sem requisições externas. Tudo fica no seu navegador. <a href="privacy.html">Política de privacidade</a>.</p>
+        </div>
+        <div class="card">
+          <h3>5 idiomas</h3>
+          <p>Português, English, Español, Français e Deutsch — segue o idioma do seu navegador.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Veja funcionando</h2>
+      <div class="grid2">
+        <div>
+          <div class="shot"><img src="img/liveedge-popup.png" alt="Popup do LiveEdge mostrando 3.1s de atraso e 14 minutos devolvidos" loading="lazy"></div>
+          <p class="caption">Status ao vivo no popup: atraso atual, margem da rede e tempo devolvido.</p>
+        </div>
+        <div>
+          <div class="shot"><img src="img/liveedge-pill-tooltip.png" alt="Medidor do LiveEdge na barra do player marcando 1.5s atrás do ao vivo" loading="lazy"></div>
+          <p class="caption">O medidor vive na barra do player — 1.5s atrás do ao vivo, colado no mínimo.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Honesto por princípio</h2>
+      <div class="honest">
+        <p><b>O LiveEdge reduz o atraso que se acumula dentro do seu player.</b> Ele não remove o delay
+        de transmissão da emissora (encoder/CDN), que existe antes do vídeo chegar ao seu navegador —
+        nenhuma extensão consegue isso. O que dá pra eliminar, ele elimina; e te mostra o número real.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Apoie o projeto</h2>
+      <p style="color: var(--muted); max-width: 620px;">Todos os recursos estão disponíveis para todos — não existe
+        plano pago. Se o LiveEdge melhorou suas lives, você pode apoiar o desenvolvimento com uma doação
+        via Pix (na página de apoio da extensão) ou pelo <a href="https://ko-fi.com/welbr" target="_blank" rel="noopener">Ko-fi</a>.</p>
+    </section>
+
+    <footer>
+      <p><a href="privacy.html">Privacidade e Termos</a> · <a href="https://x.com/liveedgeapp" target="_blank" rel="noopener">@liveedgeapp</a> · <a href="https://chromewebstore.google.com/detail/dcojohelaopacelnmcajjpnbojicphci" target="_blank" rel="noopener">Chrome Web Store</a></p>
+      <p>Projeto independente, não afiliado, endossado ou patrocinado pelo YouTube ou Google.
+        "YouTube" e "Chrome" são marcas da Google LLC, citadas aqui apenas para descrever compatibilidade.</p>
+      <p>© 2026 Welington de Sousa Oliveira</p>
+    </footer>
+  </div>
+</body>
+</html>
