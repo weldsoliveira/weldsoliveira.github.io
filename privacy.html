@@ -38,7 +38,7 @@
     </header>
 
     <h1>Privacy Policy &amp; Terms of Use</h1>
-    <p class="updated">LiveEdge for YouTube (Chrome extension) — last updated: July 6, 2026</p>
+    <p class="updated">LiveEdge for YouTube (Chrome extension) — last updated: July 8, 2026</p>
 
     <h2>1. What the extension does</h2>
     <p>
@@ -68,9 +68,11 @@
         are signed into Chrome, syncs through your Google account. The developer never sees them.
       </li>
       <li>
-        A cumulative counter of time saved (a single number) and a one-time "first live seen"
-        flag are stored with <code>chrome.storage.local</code> — on your device only, never
-        transmitted, and deleted when the extension is uninstalled.
+        A cumulative counter of time saved (a single number), a one-time "first live seen"
+        flag, and a small table of learned network-calibration values (the safe latency
+        cushion per video quality, e.g. "1080p: 2.5s" — technical numbers that expire
+        automatically after 7 days) are stored with <code>chrome.storage.local</code> — on
+        your device only, never transmitted, and deleted when the extension is uninstalled.
       </li>
       <li>Other statistics shown in the status panel exist only in the page's memory and are discarded when the tab closes.</li>
     </ul>
