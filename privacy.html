@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>LiveEdge for YouTube — Privacy Policy &amp; Terms of Use</title>
-<meta name="description" content="Privacy policy and terms of use for the LiveEdge for YouTube Chrome extension. Zero data collection.">
+<meta name="description" content="Privacy policy and terms of use for the LiveEdge for YouTube browser extension. Zero data collection.">
 <link rel="icon" href="img/icon128.png">
 <style>
   :root {
@@ -38,7 +38,7 @@
     </header>
 
     <h1>Privacy Policy &amp; Terms of Use</h1>
-    <p class="updated">LiveEdge for YouTube (Chrome extension) — last updated: July 8, 2026</p>
+    <p class="updated">LiveEdge for YouTube (browser extension for Chrome and Microsoft Edge) — last updated: July 10, 2026</p>
 
     <h2>1. What the extension does</h2>
     <p>
@@ -64,14 +64,17 @@
       <li>No browsing history is read. The extension only runs on <code>youtube.com</code> pages.</li>
       <li>
         Your settings (enabled state, check interval, buffer optimizer, panel visibility) are stored
-        with <code>chrome.storage.sync</code>, which lives in your own browser profile and, if you
-        are signed into Chrome, syncs through your Google account. The developer never sees them.
+        with the browser's extension storage (<code>storage.sync</code>), which lives in your own
+        browser profile and, if you are signed in to your browser, syncs through your browser
+        account (Google account in Chrome, Microsoft account in Microsoft Edge). The developer
+        never sees them.
       </li>
       <li>
         A cumulative counter of time saved (a single number), a one-time "first live seen"
         flag, and a small table of learned network-calibration values (the safe latency
         cushion per video quality, e.g. "1080p: 2.5s" — technical numbers that expire
-        automatically after 7 days) are stored with <code>chrome.storage.local</code> — on
+        automatically after 7 days) are stored with the browser's local extension storage
+        (<code>storage.local</code>) — on
         your device only, never transmitted, and deleted when the extension is uninstalled.
       </li>
       <li>Other statistics shown in the status panel exist only in the page's memory and are discarded when the tab closes.</li>
@@ -92,7 +95,8 @@
       <li>The extension is provided <strong>"as is"</strong>, at no cost, without warranty of any kind.</li>
       <li>
         It is an independent project, <strong>not affiliated with, endorsed by, or sponsored by
-        YouTube or Google</strong>. "YouTube" and "Chrome" are trademarks of Google LLC, used here
+        YouTube, Google, or Microsoft</strong>. "YouTube" and "Chrome" are trademarks of Google LLC;
+        "Microsoft Edge" is a trademark of Microsoft Corporation. These names are used here
         only to describe compatibility.
       </li>
       <li>
@@ -112,9 +116,11 @@
 
     <h2>5. Contact</h2>
     <p>
-      Questions or issues? Reach out through the
-      <a href="https://chromewebstore.google.com/detail/dcojohelaopacelnmcajjpnbojicphci" target="_blank" rel="noopener">Chrome Web Store listing</a>'s
-      support section.
+      Questions or issues? Reach out through the support section of the extension's store
+      listing — <a href="https://chromewebstore.google.com/detail/dcojohelaopacelnmcajjpnbojicphci" target="_blank" rel="noopener">Chrome Web Store</a>
+      or Microsoft Edge Add-ons.
+      <!-- TODO: link the Edge Add-ons listing URL here after the extension is published -->
+
     </p>
 
     <footer>
