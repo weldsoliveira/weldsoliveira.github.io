@@ -5,6 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>LiveEdge for YouTube — menos atraso nas lives</title>
 <meta name="description" content="Extensão Chrome que mantém as lives do YouTube coladas no ao vivo: ressincronização automática, otimizador de buffer e medidor de atraso em tempo real.">
+<link rel="canonical" href="https://weldsoliveira.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://weldsoliveira.github.io/">
+<meta property="og:title" content="LiveEdge for YouTube — menos atraso nas lives">
+<meta property="og:description" content="Ressincronização automática, otimização de buffer e medição de atraso em transmissões ao vivo do YouTube.">
+<meta property="og:image" content="https://weldsoliveira.github.io/img/liveedge-0s-worldcup.png">
+<meta property="og:image:alt" content="LiveEdge acompanhando uma transmissão ao vivo do YouTube em 4K">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="LiveEdge for YouTube — menos atraso nas lives">
+<meta name="twitter:description" content="Mantenha o player próximo da borda disponível da transmissão ao vivo.">
+<meta name="twitter:image" content="https://weldsoliveira.github.io/img/liveedge-0s-worldcup.png">
 <link rel="icon" href="img/icon128.png">
 <style>
   :root {
@@ -14,6 +25,7 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { background: var(--bg); color: var(--text); font-family: "Segoe UI", system-ui, sans-serif; line-height: 1.6; }
   a { color: var(--blue); text-decoration: none; }
+  a:focus-visible { outline: 3px solid var(--teal); outline-offset: 4px; border-radius: 4px; }
   .wrap { max-width: 980px; margin: 0 auto; padding: 0 24px; }
   header { padding: 28px 0; display: flex; align-items: center; gap: 12px; }
   header img { width: 40px; height: 40px; border-radius: 10px; }
@@ -54,9 +66,9 @@
         sem você configurar nada. Um medidor discreto na barra do player mostra o seu atraso em tempo real.</p>
       <a class="cta" href="https://chromewebstore.google.com/detail/dcojohelaopacelnmcajjpnbojicphci" target="_blank" rel="noopener">Instalar na Chrome Web Store</a>
       <div class="shot">
-        <img src="img/liveedge-0s-worldcup.png" alt="Live da Copa do Mundo no YouTube com o LiveEdge marcando 0.0s atrás do ao vivo em 4K" loading="lazy">
+        <img src="img/liveedge-0s-worldcup.png" alt="Live da Copa do Mundo no YouTube com o LiveEdge marcando 0.0s de drift no player em 4K" loading="lazy">
       </div>
-      <p class="caption">Brasil x Noruega na CazéTV, oitavas da Copa 2026 — <b>0.0s atrás do ao vivo</b>, em 4K.</p>
+      <p class="caption">Brasil x Noruega na CazéTV, oitavas da Copa 2026 — <b>0.0s de drift no player</b>, colado à borda disponível da transmissão em 4K.</p>
     </div>
 
     <section>
@@ -68,7 +80,7 @@
         </div>
         <div class="card">
           <h3>Otimizador de buffer</h3>
-          <p>Acelera a reprodução de forma imperceptível para encostar na borda da transmissão — e recua se a sua rede não sustentar. Sem travamentos.</p>
+          <p>Acelera a reprodução de forma imperceptível para encostar na borda da transmissão — e recua automaticamente se a sua rede não sustentar.</p>
         </div>
         <div class="card">
           <h3>Medidor de atraso</h3>
