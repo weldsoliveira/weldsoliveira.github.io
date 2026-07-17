@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>LiveEdge for YouTube — Privacy Policy &amp; Terms of Use</title>
-<meta name="description" content="Privacy policy and terms of use for the LiveEdge for YouTube browser extension. Zero data collection.">
+<meta name="description" content="Privacy policy and terms of use for LiveEdge for YouTube, including local extension data and permissions.">
 <link rel="canonical" href="https://weldsoliveira.github.io/privacy.html">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://weldsoliveira.github.io/privacy.html">
 <meta property="og:title" content="LiveEdge for YouTube — Privacy Policy &amp; Terms of Use">
-<meta property="og:description" content="How LiveEdge works, what it stores locally, and its zero-data-collection policy.">
+<meta property="og:description" content="How LiveEdge works, what it stores locally, and why it accesses the YouTube live player.">
 <meta property="og:image" content="https://weldsoliveira.github.io/img/icon128.png">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="img/icon128.png">
@@ -46,7 +46,7 @@
     </header>
 
     <h1>Privacy Policy &amp; Terms of Use</h1>
-    <p class="updated">LiveEdge for YouTube (browser extension for Chrome and Microsoft Edge) — last updated: July 10, 2026</p>
+    <p class="updated">LiveEdge for YouTube (browser extension for Chrome and Microsoft Edge) &mdash; last updated: July 17, 2026</p>
 
     <h2>1. What the extension does</h2>
     <p>
@@ -64,40 +64,49 @@
       </p>
     </div>
 
-    <h2>2. Privacy — what we collect</h2>
-    <p><strong>Nothing.</strong> In detail:</p>
+    <h2>2. Privacy &mdash; local data and collection</h2>
+    <p>
+      LiveEdge does not collect or transmit personal data to the developer or to third
+      parties. To provide its features, it processes the current YouTube live player state
+      and stores a small amount of operational data in your browser profile:
+    </p>
     <ul>
-      <li>No personal data is collected, stored, or transmitted anywhere.</li>
-      <li>No analytics, telemetry, tracking pixels, or third-party services of any kind.</li>
-      <li>No browsing history is read. The extension only runs on <code>youtube.com</code> pages.</li>
+      <li>No analytics, telemetry, tracking pixels, advertising identifiers, or remote servers.</li>
+      <li>
+        No browsing history is collected. The extension runs only on <code>youtube.com</code>
+        pages and reads the current live player's state only as needed to detect buffer drift,
+        identify a change of live stream, and display status.
+      </li>
       <li>
         Your settings (enabled state, check interval, buffer optimizer, panel visibility) are stored
-        with the browser's extension storage (<code>storage.sync</code>), which lives in your own
-        browser profile and, if you are signed in to your browser, syncs through your browser
-        account (Google account in Chrome, Microsoft account in Microsoft Edge). The developer
-        never sees them.
+        with the browser's extension storage (<code>storage.sync</code>). If browser sync is
+        enabled, Chrome or Edge may sync them through your browser account. The developer never
+        receives or sees them.
       </li>
       <li>
-        A cumulative counter of time saved (a single number), a one-time "first live seen"
-        flag, and a small table of learned network-calibration values (the safe latency
-        cushion per video quality, e.g. "1080p: 2.5s" — technical numbers that expire
-        automatically after 7 days) are stored with the browser's local extension storage
-        (<code>storage.local</code>) — on
-        your device only, never transmitted, and deleted when the extension is uninstalled.
+        Local extension storage (<code>storage.local</code>) keeps, on your device only: the
+        cumulative time-saved counter; a one-time interface hint flag; and the buffer cushion
+        learned for each video quality, together with a timestamp. Learned cushions older than
+        seven days are ignored. These records are never transmitted.
       </li>
-      <li>Other statistics shown in the status panel exist only in the page's memory and are discarded when the tab closes.</li>
+      <li>
+        Live-session statistics shown in the popup and player panel remain in the page's memory
+        and reset when you change live streams or close the tab.
+      </li>
+      <li>
+        Local extension data is never sold or shared. You can remove it by uninstalling the
+        extension or clearing the extension's stored data in your browser.
+      </li>
     </ul>
-
     <h2>3. Permissions explained</h2>
     <ul>
-      <li><strong>storage</strong> — saves your settings so they persist between sessions.</li>
+      <li><strong>storage</strong> &mdash; saves settings, the time-saved total, interface state, and learned buffer cushions.</li>
       <li>
-        <strong>Access to youtube.com</strong> — required to detect the "LIVE" badge state and
-        interact with the video player on watch pages. The extension does not read, alter, or
-        collect any other content from the page.
+        <strong>Access to youtube.com</strong> &mdash; required to detect the "LIVE" badge and
+        player state, adjust playback, and show the optional player panel. Page information is
+        used only for these user-facing features and is not sent to the developer or third parties.
       </li>
     </ul>
-
     <h2>4. Terms of use</h2>
     <ul>
       <li>The extension is provided <strong>"as is"</strong>, at no cost, without warranty of any kind.</li>
