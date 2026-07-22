@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>LiveEdge for YouTube — menos atraso nas lives</title>
-<meta name="description" content="Extensão Chrome que mantém as lives do YouTube coladas no ao vivo: ressincronização automática, otimizador de buffer e medidor de atraso em tempo real.">
+<meta name="description" content="Extensão para Chrome e Microsoft Edge que mantém as lives do YouTube coladas no ao vivo: ressincronização automática, otimizador de buffer e medidor de atraso em tempo real.">
 <link rel="canonical" href="https://weldsoliveira.github.io/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://weldsoliveira.github.io/">
@@ -34,7 +34,9 @@
   .hero h1 { font-size: clamp(30px, 5vw, 46px); line-height: 1.15; font-weight: 700; letter-spacing: -0.5px; }
   .hero h1 .hl { background: linear-gradient(90deg, var(--blue), var(--teal)); -webkit-background-clip: text; background-clip: text; color: transparent; }
   .hero p.sub { margin-top: 18px; font-size: 19px; color: var(--muted); max-width: 620px; }
-  .cta { display: inline-block; margin-top: 28px; background: linear-gradient(90deg, #1a73e8, #0d9488); color: #fff; font-weight: 600; font-size: 17px; padding: 14px 28px; border-radius: 10px; }
+  .store-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+  .cta { display: inline-block; background: linear-gradient(90deg, #1a73e8, #0d9488); color: #fff; font-weight: 600; font-size: 17px; padding: 14px 28px; border-radius: 10px; }
+  .cta.edge { background: linear-gradient(90deg, #0f6cbd, #0d9488); }
   .cta:hover { filter: brightness(1.1); }
   .shot { margin: 44px 0 0; border: 1px solid var(--border); border-radius: 14px; overflow: hidden; box-shadow: 0 24px 80px rgba(0,0,0,0.5); }
   .shot img { display: block; width: 100%; height: auto; }
@@ -64,7 +66,10 @@
       <h1>Chega de saber do gol<br>pelo <span class="hl">grito do vizinho</span>.</h1>
       <p class="sub">O LiveEdge mantém as lives do YouTube coladas no ao vivo — automaticamente,
         sem você configurar nada. Um medidor discreto na barra do player mostra o seu atraso em tempo real.</p>
-      <a class="cta" href="https://chromewebstore.google.com/detail/dcojohelaopacelnmcajjpnbojicphci" target="_blank" rel="noopener">Instalar na Chrome Web Store</a>
+      <div class="store-actions">
+        <a class="cta" href="https://chromewebstore.google.com/detail/dcojohelaopacelnmcajjpnbojicphci" target="_blank" rel="noopener">Instalar no Google Chrome</a>
+        <a class="cta edge" href="https://microsoftedge.microsoft.com/addons/detail/eglcoekefhlohbhbdbmmdmidclkofgnp" target="_blank" rel="noopener">Instalar no Microsoft Edge</a>
+      </div>
       <div class="shot">
         <img src="img/liveedge-0s-worldcup.png" alt="Live da Copa do Mundo no YouTube com o LiveEdge marcando 0.0s de drift no player em 4K" loading="lazy">
       </div>
@@ -132,9 +137,9 @@
     </section>
 
     <footer>
-      <p><a href="privacy.html">Privacidade e Termos</a> · <a href="https://x.com/liveedgeapp" target="_blank" rel="noopener">@liveedgeapp</a> · <a href="https://chromewebstore.google.com/detail/dcojohelaopacelnmcajjpnbojicphci" target="_blank" rel="noopener">Chrome Web Store</a></p>
-      <p>Projeto independente, não afiliado, endossado ou patrocinado pelo YouTube ou Google.
-        "YouTube" e "Chrome" são marcas da Google LLC, citadas aqui apenas para descrever compatibilidade.</p>
+      <p><a href="privacy.html">Privacidade e Termos</a> · <a href="https://x.com/liveedgeapp" target="_blank" rel="noopener">@liveedgeapp</a> · <a href="https://chromewebstore.google.com/detail/dcojohelaopacelnmcajjpnbojicphci" target="_blank" rel="noopener">Chrome Web Store</a> · <a href="https://microsoftedge.microsoft.com/addons/detail/eglcoekefhlohbhbdbmmdmidclkofgnp" target="_blank" rel="noopener">Microsoft Edge Add-ons</a></p>
+      <p>Projeto independente, não afiliado, endossado ou patrocinado pelo YouTube, Google ou Microsoft.
+        "YouTube" e "Chrome" são marcas da Google LLC; "Microsoft Edge" é marca da Microsoft Corporation. Esses nomes são citados aqui apenas para descrever compatibilidade.</p>
       <p>© 2026 Welington de Sousa Oliveira</p>
     </footer>
   </div>
